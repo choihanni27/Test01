@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!--
+    This is an HTML infographic generated from a student research report.
+    It summarizes the key findings, methodology, and conclusions visually.
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>미림마이스터고 1학년 3반 AI 활용 실태 보고서</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js"></script>
+    <style>
+        body {
+            font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+            background-color: #F4F7F9; /* Light Background */
+            color: #263238; /* Dark Text */
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        .card {
+            background-color: #FFFFFF; /* Light Background */
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        .section-title {
+            color: #2A62B6; /* Primary Blue */
+            font-size: 1.75rem;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        .subsection-title {
+            color: #263238; /* Dark Text */
+            font-size: 1.25rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            border-left: 4px solid #4ECDC4; /* Secondary Teal */
+            padding-left: 0.75rem;
+        }
+        .text-primary-blue {
+            color: #2A62B6;
+        }
+        .bg-secondary-teal {
+            background-color: #4ECDC4;
+        }
+        .border-accent-grey {
+            border-color: #A9A9A9;
+        }
+        .text-light-background {
+            color: #F4F7F9;
+        }
+        .bg-supporting-light-blue {
+            background-color: #E0F2FE;
+        }
+
+        .chart-container {
+            position: relative;
+            width: 100%;
+            height: 350px; /* Default height */
+            max-height: 450px; /* Default max height */
+            margin: 0 auto;
+        }
+
+        /* Responsive adjustments for chart containers */
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 400px;
+            }
+        }
+        @media (min-width: 1024px) {
+            .chart-container {
+                height: 450px;
+            }
+        }
+
+        .interview-summary {
+            background-color: #F4F7F9; /* Light Background */
+            border-left: 4px solid #2A62B6; /* Primary Blue */
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-radius: 0.5rem;
+        }
+    </style>
+</head>
+<body class="leading-relaxed">
+    <header class="bg-primary-blue text-white py-8 text-center">
+        <div class="container">
+            <h1 class="text-4xl font-extrabold mb-2">미림마이스터고 1학년 3반 AI 활용 실태 보고서</h1>
+            <p class="text-xl">우리 반의 AI 사용 현황과 활용 방안에 대한 심층 보고서</p>
+            <p class="mt-4 text-lg">작성일: 2025년 5월 28일</p>
+            <div class="mt-4 flex justify-center space-x-8 text-lg">
+                <div class="flex flex-col items-center">
+                    <p class="font-bold">1학년 3반 4조</p>
+                    <ul class="text-sm list-none p-0 m-0">
+                        <li>1302 김세부</li>
+                        <li>1303 김하진</li>
+                        <li>1308 안지호</li>
+                        <li>1309 윤기진</li>
+                        <li>1318 최한이</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container py-8">
+        <section class="card">
+            <h2 class="section-title">Ⅰ. 서론: 조사 동기 및 목적</h2>
+            <p class="mb-4">
+                최근 다양한 생성형 AI 서비스의 등장과 활용 범위 확장에 따라, AI의 효과적인 활용은 현대사회에서 중요한 요소로 자리매김하였다.
+                하지만 여전히 AI를 특정 용도에만 제한적으로 사용하거나, 다양한 기능과 활용 방법을 인지하지 못하여 비효율적으로 사용하는 경우가 발생하였다.
+                예를 들어 AI를 검색 도구 기능으로만 사용하는 경우가 많았다.
+                이에 따라 현대 사회를 살아가는 데 있어 AI 활용법을 점검하고, 더 효율적인 활용 방안을 모색하는 것이 필요하였다.
+            </p>
+            <p class="mb-4 font-bold text-primary-blue">
+                본 보고서는 미림마이스터고등학교 1학년 3반 학생들의 생성형 AI 서비스 이용 현황을 조사하여 AI 사용 용도와 빈도를 분석하고, AI를 더욱 유익하게 활용할 수 있는 방안을 제시하고자 하였다.
+            </p>
+        </section>
+
+        <section class="card">
+            <h2 class="section-title">Ⅱ. 조사 방법 및 절차</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="p-4 bg-supporting-light-blue rounded-lg">
+                    <h3 class="subsection-title">조사 대상</h3>
+                    <p>미림마이스터고등학교 1학년 3반 학생 전원</p>
+                </div>
+                <div class="p-4 bg-supporting-light-blue rounded-lg">
+                    <h3 class="subsection-title">조사 내용</h3>
+                    <ul class="list-disc list-inside">
+                        <li>설문 조사: 1학년 3반 학생들의 AI 사용 목적 및 빈도, 활용 방식에 대한 조사</li>
+                        <li>인터뷰: AI 활용 경험이 있는 학생 2인을 선정하여 AI 사용 현황, 장단점 파악, 사용 이유 등 심층 분석</li>
+                    </ul>
+                </div>
+                <div class="p-4 bg-supporting-light-blue rounded-lg">
+                    <h3 class="subsection-title">조사 방법</h3>
+                    <ul class="list-disc list-inside">
+                        <li>설문 조사: Google Forms를 활용한 온라인 설문 진행</li>
+                        <li>인터뷰: AI 활용 경험이 있는 학생 2인 선정 후 심층 인터뷰 진행</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <hr class="my-8 border-accent-grey">
+
+        <section class="card">
+            <h2 class="section-title">Ⅲ. 조사 결과</h2>
+
+            <div class="mb-8">
+                <h3 class="subsection-title">1. 설문 조사 결과</h3>
+
+                <h4 class="text-lg font-semibold mb-4 border-l-2 border-secondary-teal pl-3">가. AI 생성 결과물 활용 방식</h4>
+                <p class="mb-4">
+                    학생들은 AI 결과물을 <span class="font-bold">일부 수정하여 사용하거나 아이디어를 얻는 용도로만 활용</span>하는 경향을 보였다.
+                    이는 학생들이 AI를 보조 도구로 인식하고, 생성된 결과물을 비판적으로 검토하여 자신의 목적에 맞게 수정·활용함을 보여준다.
+                </p>
+                <div class="chart-container">
+                    <canvas id="aiUtilizationChart"></canvas>
+                </div>
+            </div>
+
+            <div class="mb-8">
+                <h4 class="text-lg font-semibold mb-4 border-l-2 border-secondary-teal pl-3">나. AI 사용 목적</h4>
+                <p class="mb-4">
+                    AI 사용 목적에서는 <span class="font-bold">정보 탐색이 가장 높은 응답률</span>을 보였으며, 그 외에도 다양한 학업 관련 활동에 AI를 이용하고 있음을 확인하였다.
+                </p>
+                <div class="chart-container">
+                    <canvas id="aiPurposeChart"></canvas>
+                </div>
+            </div>
+
+            <div class="mb-8">
+                <h4 class="text-lg font-semibold mb-4 border-l-2 border-secondary-teal pl-3">다. AI 사용 빈도</h4>
+                <p class="mb-4">
+                    조사 결과, 전체 학생 중 <span class="font-bold">58.8%가 AI 사용 빈도에 대해 ‘보통’으로 응답</span>하였다.
+                    ‘AI를 아예 사용하지 않는다’는 항목에 응답한 학생이 0%였다는 점에서, 학생 개개인의 사용 빈도에는 차이가 있을지라도 모두가 AI를 어느 정도 활용하고 있다는 사실을 확인하였다.
+                    이러한 결과는 미림마이스터고등학교 1학년 3반 학생들이 AI를 생활이나 학습 속에서 자연스럽게 접하고 있으며, AI 활용이 보편화되었음을 보여준다.
+                </p>
+                <div class="chart-container max-h-[350px] md:max-h-[400px]">
+                    <canvas id="aiFrequencyChart"></canvas>
+                </div>
+            </div>
+
+            <h3 class="subsection-title">2. 인터뷰 결과</h3>
+            <p class="mb-4">두 학생의 인터뷰 결과는 동일한 교육 환경에 있더라도 생성형 AI에 대한 인식과 활용 수준에 개인차가 존재함을 보여주었다.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                <div class="interview-summary">
+                    <h4 class="font-semibold text-primary-blue mb-2">가. 인터뷰 1 요약: 이서현 학생</h4>
+                    <p class="text-sm italic mb-2">인터뷰 촬영 링크: <a href="https://clovanote.naver.com/w/GLmAkgfdehJNT6PpSSgw/note-detail/a52267cf-1766-4334-a301-19c6da8a2ad1n" target="_blank" class="text-blue-500 hover:underline">클로바노트 링크</a></p>
+                    <p>
+                        이서현 학생은 생성형 AI 사용 빈도가 적으며, 생성형 AI 사용 시 "사이버 펑크를 알고 있냐"와 같은 질문을 하거나 숙제 도중 모르는 것을 물어본다고 응답하였다.
+                        이러한 답변을 통해 이서현 학생은 생성형 AI의 필요성을 크게 인지하지 못하며, 생성형 AI를 학습 도구보다는 단순히 챗봇이나 검색 도구로 사용하고 있음을 알 수 있었다.
+                    </p>
+                </div>
+                <div class="interview-summary">
+                    <h4 class="font-semibold text-primary-blue mb-2">나. 인터뷰 2 요약: 노윤서 학생</h4>
+                    <p class="text-sm italic mb-2">인터뷰 촬영 링크: <a href="https://clovanote.naver.com/w/GLmAkgfdehJNT6PpSSgw/note-detail/2e36ddb5-356b-4bf4-8e59-b79b4dd4ce42n" target="_blank" class="text-blue-500 hover:underline">클로바노트 링크</a></p>
+                    <p>
+                        노윤서 학생은 생성형 AI를 활용하여 코드 디버깅, 오류 해결 등을 수행하며 AI를 적극적으로 사용하고 있었다.
+                        특히 AI를 학업에 적극적으로 활용하며, 전공 문제 해결과 학습 시간대에 맞춘 루틴을 보여주었다.
+                        이는 이전 인터뷰 대상자인 이서현 학생과 비교할 때 생성형 AI를 더욱 적극적으로 사용하며 학업 및 전공 문제 해결에 도움을 받고 있음을 드러내었다.
+                    </p>
+                </div>
+            </div>
+
+            <h4 class="text-lg font-semibold mb-4 border-l-2 border-secondary-teal pl-3">다. 종합 분석</h4>
+            <p class="mb-4">
+                한 명은 AI를 탐색적, 간헐적으로 사용하는 반면, 다른 한 명은 학업 성취도 향상을 위한 적극적 도구로 활용하였다.
+                이러한 차이는 AI 활용 교육의 필요성과 함께 개인 맞춤형 접근 방식의 중요성을 드러내었다.
+                인터뷰 내용을 분석한 결과, <span class="font-bold">‘학습’, ‘전공’, ‘코드’, ‘해결’ 등의 키워드</span>가 두드러지게 나타났으며, 이는 학생들이 AI를 주로 학업 관련 문제 해결에 활용하고 있음을 보여주었다.
+            </p>
+        </section>
+
+        <hr class="my-8 border-accent-grey">
+
+        <section class="card">
+            <h2 class="section-title">Ⅳ. 결론 및 제언</h2>
+
+            <div class="mb-8">
+                <h3 class="subsection-title">1. 결론</h3>
+                <ul class="list-disc list-inside space-y-2">
+                    <li>
+                        <span class="font-bold">AI 활용 보편화:</span> 대다수 학생(82.4%)이 정보 탐색을 주 목적으로 AI를 활용하며, 모든 학생이 AI를 사용한 경험이 있는 등 AI 활용이 보편화되었다.
+                    </li>
+                    <li>
+                        <span class="font-bold">주체적 활용 양상:</span> 학생들은 AI가 생성한 결과물을 그대로 수용하기보다는 비판적으로 검토하여 일부 수정(82.4%)하는 등 주체적인 활용 양상을 보였다.
+                    </li>
+                    <li>
+                        <span class="font-bold">도구적 활용 편중 및 개인차:</span> AI를 대화형 상호작용 도구로 사용하는 비율은 전무하며, 도구적 활용에 편중된 경향을 나타내었다. 또한 학습 도구로서의 적극적 활용 수준에는 개인차가 존재하였다.
+                    </li>
+                </ul>
+            </div>
+
+            <div class="mb-8">
+                <h3 class="subsection-title">2. 제언 및 다짐</h3>
+                <ul class="list-disc list-inside space-y-2">
+                    <li>
+                        <span class="font-bold">다양한 AI 활용 사례 및 방법 안내:</span> AI를 효과적으로 활용하지 못하는 학생들에게 다양한 활용 사례와 방법을 적극적으로 안내할 필요가 있었다. AI를 단순히 검색 도구처럼 사용하는 것을 넘어, 서비스 품질을 향상시킬 수 있는 AI를 일상 대화, 흥미 주제 탐구, 콘텐츠 제작, 창의적 글쓰기 등 다양한 영역에서 활용할 수 있는 방법을 소개하여 AI에 대한 이해도와 활용 능력을 높이도록 지원해야 한다.
+                    </li>
+                    <li>
+                        <span class="font-bold">학생들의 능동적 활용 노력:</span> 학생들 스스로 AI를 단순한 과제 해결 도구로 한정하지 않고, 자기계발, 창의적 사고 확장, 비판적 사고 훈련을 위한 도구로 활용하도록 노력해야 한다.
+                        이를 위해 학생들 간의 AI 활용 경험을 활발히 공유하고, AI 기술에 대한 지속적인 관심과 탐구를 통해 디지털 세상에서 디지털 기기를 현명하게 활용하는 능력을 함께 키워나가야 한다.
+                    </li>
+                </ul>
+                <p class="mt-4 p-4 bg-secondary-teal text-white rounded-lg font-bold text-center">
+                    본 조사를 계기로 1학년 3반 학생들은 생성형 AI가 학습과 일상생활에 미치는 긍정적인 영향을 인지하고, 앞으로 AI를 더욱 능동적이고 비판적으로 활용하여 학습 능력 향상 및 창의적 문제 해결에 기여할 것을 다짐한다.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-dark-text text-light-background py-6 text-center">
+        <p>&copy; 2025 미림마이스터고등학교 1학년 3반 4조</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Function to wrap long labels
+            const wrapLabel = (label, maxLength = 16) => {
+                if (label.length <= maxLength) {
+                    return label;
+                }
+                const words = label.split(' ');
+                let wrappedLabel = [];
+                let currentLine = '';
+                for (let i = 0; i < words.length; i++) {
+                    if ((currentLine + words[i]).length > maxLength && currentLine !== '') {
+                        wrappedLabel.push(currentLine.trim());
+                        currentLine = words[i] + ' ';
+                    } else {
+                        currentLine += words[i] + ' ';
+                    }
+                }
+                wrappedLabel.push(currentLine.trim());
+                return wrappedLabel;
+            };
+
+            // Chart 1: AI 생성 결과물 활용 방식
+            const aiUtilizationCtx = document.getElementById('aiUtilizationChart').getContext('2d');
+            const aiUtilizationChart = new Chart(aiUtilizationCtx, {
+                type: 'bar',
+                data: {
+                    labels: [
+                        'AI 결과물을 그대로 사용한다',
+                        'AI 결과물을 일부 수정하여 사용한다',
+                        'AI 결과물을 참고하여 완전히 새롭게 작성한다',
+                        'AI 결과물을 아이디어 얻는 용도로만 활용한다',
+                        'AI 결과물을 다른 정보와 비교/검증하는 용도로 활용한다',
+                        '주로 AI와 대화하며 상호작용한다 (결과물 자체 활용보다는 대화 과정 중시)'
+                    ].map(label => wrapLabel(label)),
+                    datasets: [{
+                        label: '응답수 (명)',
+                        data: [1, 14, 4, 11, 5, 0],
+                        backgroundColor: '#2A62B6', /* Primary Blue */
+                        borderColor: '#2A62B6',
+                        borderWidth: 1,
+                        yAxisID: 'y'
+                    }, {
+                        label: '응답 비율 (%)',
+                        data: [5.9, 82.4, 23.5, 64.7, 29.4, 0],
+                        type: 'line',
+                        fill: false,
+                        borderColor: '#4ECDC4', /* Secondary Teal */
+                        tension: 0.1,
+                        yAxisID: 'y1'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'AI 생성 결과물 활용 방식 (복수 응답 가능)',
+                            font: {
+                                size: 18,
+                                weight: 'bold'
+                            },
+                            color: '#263238'
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    let label = context.dataset.label || '';
+                                    if (label) {
+                                        label += ': ';
+                                    }
+                                    if (context.dataset.type === 'line') {
+                                        label += context.parsed.y + '%';
+                                    } else {
+                                        label += context.parsed.y + '명';
+                                    }
+                                    return label;
+                                }
+                            }
+                        },
+                        legend: {
+                            labels: {
+                                color: '#263238'
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            ticks: {
+                                font: {
+                                    size: 12,
+                                    color: '#263238'
+                                }
+                            },
+                            grid: {
+                                color: '#E0F2FE'
+                            }
+                        },
+                        y: {
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: '응답수 (명)',
+                                color: '#263238'
+                            },
+                            ticks: {
+                                callback: function(value) {
+                                    return value + '명';
+                                },
+                                color: '#263238'
+                            },
+                            grid: {
+                                color: '#A9A9A9'
+                            }
+                        },
+                        y1: {
+                            type: 'linear',
+                            display: true,
+                            position: 'right',
+                            grid: {
+                                drawOnChartArea: false,
+                            },
+                            title: {
+                                display: true,
+                                text: '응답 비율 (%)',
+                                color: '#263238'
+                            },
+                            ticks: {
+                                callback: function(value) {
+                                    return value + '%';
+                                },
+                                color: '#263238'
+                            }
+                        }
+                    }
+                }
+            });
+
+            // Chart 2: AI 사용 목적
+            const aiPurposeCtx = document.getElementById('aiPurposeChart').getContext('2d');
+            const aiPurposeChart = new Chart(aiPurposeCtx, {
+                type: 'bar',
+                data: {
+                    labels: [
+                        '공부 (학습 내용 이해, 문제 풀이 등)',
+                        '정보 탐색 (자료 조사, 최신 정보 확인 등)',
+                        '일상 대화 (심심풀이 대화, 감정 공유 등)',
+                        '콘텐츠 제작 (글쓰기, 이미지/영상 생성 아이디어, 음악 작곡 등)',
+                        '프로그래밍/코딩 도움 (코드 작성, 오류 해결, 개념 설명 등)',
+                        '번역/요약 (외국어 번역, 긴 글 요약 등)',
+                        '아이디어 발상 (과제, 프로젝트 등 아이디어 얻기)'
+                    ].map(label => wrapLabel(label)),
+                    datasets: [{
+                        label: '응답수 (명)',
+                        data: [10, 14, 4, 7, 6, 7, 11],
+                        backgroundColor: '#2A62B6', /* Primary Blue */
+                        borderColor: '#2A62B6',
+                        borderWidth: 1,
+                        yAxisID: 'y'
+                    }, {
+                        label: '응답 비율 (%)',
+                        data: [58.8, 82.4, 23.5, 41.2, 35.2, 41.2, 64.7],
+                        type: 'line',
+                        fill: false,
+                        borderColor: '#4ECDC4', /* Secondary Teal */
+                        tension: 0.1,
+                        yAxisID: 'y1'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'AI 사용 목적 (복수 응답 가능)',
+                            font: {
+                                size: 18,
+                                weight: 'bold'
+                            },
+                            color: '#263238'
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    let label = context.dataset.label || '';
+                                    if (label) {
+                                        label += ': ';
+                                    }
+                                    if (context.dataset.type === 'line') {
+                                        label += context.parsed.y + '%';
+                                    } else {
+                                        label += context.parsed.y + '명';
+                                    }
+                                    return label;
+                                }
+                            }
+                        },
+                        legend: {
+                            labels: {
+                                color: '#263238'
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            ticks: {
+                                font: {
+                                    size: 12,
+                                    color: '#263238'
+                                }
+                            },
+                            grid: {
+                                color: '#E0F2FE'
+                            }
+                        },
+                        y: {
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: '응답수 (명)',
+                                color: '#263238'
+                            },
+                            ticks: {
+                                callback: function(value) {
+                                    return value + '명';
+                                },
+                                color: '#263238'
+                            },
+                            grid: {
+                                color: '#A9A9A9'
+                            }
+                        },
+                        y1: {
+                            type: 'linear',
+                            display: true,
+                            position: 'right',
+                            grid: {
+                                drawOnChartArea: false,
+                            },
+                            title: {
+                                display: true,
+                                text: '응답 비율 (%)',
+                                color: '#263238'
+                            },
+                            ticks: {
+                                callback: function(value) {
+                                    return value + '%';
+                                },
+                                color: '#263238'
+                            }
+                        }
+                    }
+                }
+            });
+
+            // Chart 3: AI 사용 빈도 (Pie Chart)
+            const aiFrequencyCtx = document.getElementById('aiFrequencyChart').getContext('2d');
+            const aiFrequencyChart = new Chart(aiFrequencyCtx, {
+                type: 'pie',
+                data: {
+                    labels: ['아예 안쓴다', '거의 쓰지 않는다', '보통이다', '많이 쓴다', '거의 매일 쓴다'],
+                    datasets: [{
+                        label: 'AI 챗봇 서비스 사용 빈도',
+                        data: [0, 2, 10, 4, 1],
+                        backgroundColor: [
+                            '#A9A9A9', /* Accent Grey */
+                            '#E0F2FE', /* Supporting Light Blue */
+                            '#4ECDC4', /* Secondary Teal */
+                            '#2A62B6', /* Primary Blue */
+                            '#263238' /* Dark Text */
+                        ],
+                        hoverOffset: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'AI 챗봇 서비스 사용 빈도',
+                            font: {
+                                size: 18,
+                                weight: 'bold'
+                            },
+                            color: '#263238'
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    const label = context.label || '';
+                                    const value = context.raw;
+                                    const total = context.dataset.data.reduce((acc, current) => acc + current, 0);
+                                    const percentage = ((value / total) * 100).toFixed(1) + '%';
+                                    return `${label}: ${value}명 (${percentage})`;
+                                }
+                            }
+                        },
+                        legend: {
+                            position: 'right',
+                            labels: {
+                                color: '#263238'
+                            }
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+    <!--
+    인포그래픽 생성이 완료되었습니다.
+    -->
+</body>
+</html>
